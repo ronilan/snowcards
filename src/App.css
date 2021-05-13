@@ -1,0 +1,392 @@
+* {
+  box-sizing: border-box;
+}
+
+.App-card,
+.App-landing {
+  min-height: 100vh;
+  font-family: "gotham", Helvetica, Arial, sans-serif;
+}
+
+.App-card {
+  background-color: #ddd;
+}
+
+.App-landing {
+  background-color: var(--brand-color-dark);
+}
+
+/* Landing Page */
+
+.Landing {
+  max-width: 600px;
+  min-height: 100vh;
+  margin: auto;
+  background-color: #efefef;
+  padding: 5px 5px 50px 5px;
+}
+
+.Landing-header {
+  text-align: center;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.Landing-logo-img {
+  height: 80px;
+}
+
+.Form input,
+.Form select {
+  margin: 5px;
+}
+
+.Form textarea {
+  width: 100%;
+  height: 100px;
+}
+
+.Form-button-radio-clear {
+  vertical-align: middle;
+  border: none;
+  margin: 0 5px 5px 5px;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+
+  background-color: transparent;
+
+  /* inherit font & color from ancestor */
+  color: inherit;
+  font: inherit;
+
+  /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+  line-height: normal;
+
+  /* Corrects font smoothing for webkit */
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+
+  /* Corrects inability to style clickable `input` types in iOS */
+  -webkit-appearance: none;
+}
+
+.Form-link-generate {
+  border-radius: 5px;
+  padding: 10px;
+  text-decoration: none;
+  border: 1px solid #666;
+  color: #efefef;
+  background-color: var(--brand-color-dark);
+  margin: 5px;
+}
+
+.Form-link-clear {
+  border-radius: 5px;
+  padding: 2px;
+  text-decoration: none;
+  border: 1px solid #666;
+  color: #222;
+  background-color: var(--brand-color-light);
+  line-height: 30px;
+  font-size: smaller;
+}
+
+.Landing-achievements {
+  display: flex;
+  flex-direction: row;
+}
+
+.Landing-achievements-level-header {
+  margin: 15px 0 5px 0;
+  font-weight: bold;
+}
+
+.Landing-achievement-buttons {
+  flex: 0 0 80px;
+}
+
+.Landing-achievement-description {
+  flex: 1;
+  margin-bottom: 5px;
+}
+
+/* Card Page */
+
+.Card {
+  width: 1080px;
+  min-height: 1350px;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.Card-header {
+  width: 1080px;
+  height: 400px;
+  overflow: hidden;
+}
+
+.Card-main {
+  width: 1080px;
+  min-height: 900px;
+  background-color: #fff;
+
+  display: flex;
+  flex-flow: row;
+}
+
+.Card-guest-column {
+  width: 300px;
+  background-color: var(--brand-color-light);
+}
+
+.Card-Statuses-column {
+  width: 780px;
+}
+
+.Card-footer {
+  height: 50px;
+  width: 1080px;  
+  background-color: var(--brand-color-dark);
+  line-height: 50px;
+  vertical-align: middle;
+  text-align: center;
+  color: #fff;
+}
+
+.Card-logo {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 1080px;
+  height: 50px;
+  background-color: var(--brand-color-light);
+  text-align: right;
+  padding: 5px;
+}
+
+.Card-logo-img {
+  height: 40px;
+}
+
+.Card-header-img {
+  width: 1080px;
+  margin-top: -150px;
+  border-bottom: 1px solid #999;
+}
+
+.Card-program {
+  background-color: var(--brand-color-dark);
+  color: var(--brand-color-light)  ;
+  font-size: 24px;
+  line-height: 40px;
+  font-weight: bold;
+  padding: 5px;
+  text-align: center;
+  position: absolute;
+  width: 200px;
+  top: 0px;
+  left: 0px;
+}
+
+.Card-program-triangle-bottomleft {
+  width: 0;
+  height: 0;
+  border-bottom: 50px solid var(--brand-color-dark);
+  border-right: 50px solid transparent;
+  position: absolute;
+  top: 0px;
+  left: 200px;
+}
+
+.Card-discipline {
+  position: absolute;
+  top: 50px;
+  left: 0px;
+  width: 1080px;
+  background-color: var(--brand-color-dark);
+  color: #fefefe;
+  text-align: center;
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: bold;
+  padding: 12px;
+}
+
+.Card-level {
+  text-align: center;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: bold;
+  padding: 5px;
+}
+
+.Card-level-green-circle {
+  margin: 10px 110px;
+}
+
+.Card-level-blue-square {
+  margin: 10px 110px;
+}
+
+.Card-level-black-diamond {
+  margin: 10px 120px 20px 120px;
+}
+
+.Card-level-double-black-diamond {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 10px 90px 20px 90px;
+}
+
+.Card-level-narrow-diamond {
+  width: 0;
+  height: 0;
+  border: 30px solid transparent;
+  border-bottom: 40px solid #222;
+  position: relative;
+  top: -30px;
+}
+.Card-level-narrow-diamond:after {
+  content: '';
+  position: absolute;
+  left: -30px;
+  top: 40px;
+  width: 0;
+  height: 0;
+  border: 30px solid transparent;
+  border-top: 40px solid #222;
+}
+
+.Card-level-circle {
+  width: 80px;
+  height: 80px;
+  background-color: #3EA055;
+  border-radius: 50%
+}
+
+.Card-level-square {
+  width: 80px;
+  height: 80px;
+  background-color: #157DEC;
+}
+
+.Card-guest {
+  line-height: 36px;
+  font-size: 36px;
+  text-align: center;
+  font-weight: bold;
+  text-shadow: 1px 1px #fff;
+  padding: 10px 0 5px 0;
+  margin: 20px;
+}
+
+.Card-statuses {
+  padding: 10px 20px 20px 20px;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.Card-statuses-level-header {
+  font-size: 14px;
+  padding: 0 20px;
+  text-transform: uppercase;
+}
+
+.Card-status {
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  padding: 1px;
+}
+
+.Card-statuses-header {
+  margin: 20px;
+  font-size: 24px;
+  border-bottom: 1px solid #999;
+}
+
+.Card-status-score {
+  flex: 0 0 55px;
+  padding-top: 2px;
+}
+
+.Card-status-description {
+  flex: 1;
+  line-height: 18px;
+  font-size: 12px;
+}
+
+.Card-status-score-circle-full {
+  float: left;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 1px solid #666;
+  background-color: var(--brand-color-dark);
+  margin-right: 4px;
+}
+
+.Card-status-score-circle-green {
+  background-color: #3EA055;
+}
+
+.Card-status-score-circle-blue {
+  background-color: #157DEC;
+}
+
+.Card-status-score-circle-black {
+  background-color: #222;
+}
+
+.Card-status-score-circle-empty {
+  float: left;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 1px solid #666;
+  margin-right: 5px;
+}
+
+.Card-comments {
+  min-height: 550px;
+  border-bottom: 1px solid #999;
+  font-size: 20px;
+  line-height: 20px;
+  padding: 10px;
+  margin: 10px 20px;
+  white-space: pre-wrap;
+}
+
+.Card-comments-header {
+  border-bottom: 1px solid #999;
+  margin: 20px 20px 10px 20px;
+  font-size: 20px;
+}
+
+.Card-signature {
+  text-align: right;
+  padding: 10px 20px;
+  font-size: 14px;
+}
+
+.Card-achievements-legend {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 500px;
+  padding: 3px;
+  background-color: #fff;
+  margin-top: -25px;
+  margin-left: 260px;
+}
+
+.Card-status-legend {
+  display: flex;
+  flex-direction: row;
+  width: 25%;
+  padding: 1px;
+}
