@@ -9,7 +9,7 @@ The app is designed for mobile phone usage. Loading it requires an Internet conn
 # Example Cards
 
 * [Frank Freestyle](examples/frank-freestyle.jpeg) ⛷️
-* [Paul Park](examples/frank-freestyle.jpeg) 🏂
+* [Paul Park](examples/paul-park.jpeg) 🏂
 
 # Usage
 
