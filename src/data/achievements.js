@@ -183,7 +183,7 @@ const achievements = {
           description: 'Uses rotational lower body (hips, knees) to turn the snowboard'
         },
         {
-          key: 'turn-shape',
+          key: 'turn-rhythm',
           description: 'Shows consistent rhythm and round symmetrical turn shape'
         },
         {
@@ -381,7 +381,7 @@ const achievements = {
           description: 'Blends skills (rotation, edging, pressure) for steered arcs'
         },
         {
-          key: 'turn-shape',
+          key: 'turn-rhythm',
           description: 'Shows consistent rhythm and round symmetrical turn shape'
         },
         {
