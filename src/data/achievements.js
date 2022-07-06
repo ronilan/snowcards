@@ -162,7 +162,7 @@ const achievements = {
         },
         {
           key: 'switch-cut',
-          description: 'Can link switch turns down the Cut'
+          description: 'Can link switch turns down a Green run confidently'
         },
         {
           key: 'peak',
@@ -250,7 +250,7 @@ const achievements = {
         },
         {
           key: 'carpet',
-          description: 'Able to get on and off magic carpet'
+          description: 'Able to get on and off Magic Carpet'
         },
         {
           key: 'chairlift',
