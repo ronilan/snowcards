@@ -1,7 +1,7 @@
 import React from 'react'
 import {
   BrowserRouter as Router,
-  Switch,
+  Routes,
   Route
 } from 'react-router-dom'
 
@@ -19,14 +19,10 @@ function App () {
   // route
   return (
     <Router>
-      <Switch>
-        <Route path='/card'>
-          <Card />
-        </Route>
-        <Route path='/'>
-          <Landing />
-        </Route>
-      </Switch>
+      <Routes>
+        <Route path='/card' element={<Card />} />
+        <Route path='/' element={<Landing />} />
+      </Routes>
     </Router>
   )
 }

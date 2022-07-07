@@ -5,14 +5,13 @@ module.exports = {
   },
   extends: [
     'plugin:react/recommended',
-    'standard',
-    'standard-jsx'
+    'standard'
   ],
   parserOptions: {
     ecmaFeatures: {
       jsx: true
     },
-    ecmaVersion: 12,
+    ecmaVersion: 'latest',
     sourceType: 'module'
   },
   plugins: [

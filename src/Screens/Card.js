@@ -12,7 +12,12 @@ function Card () {
   useEffect(() => {
     // note:even though capture waits for images to load before trying to capture,
     // the capture process itself tends to fail initial (non cached) image loading on iOS
-    capture({ width: 1080, pixelRatio: 1 })
+
+    // even though useEffect gets an empty array, it stills executes twice.
+    // prevent that.
+    if (!document.getElementById('Generated')) {
+      capture({ width: 1080, pixelRatio: 1 })
+    }
   }, []) // empty array means 'run once'
 
   const current = JSON.parse(window.localStorage.getItem('snow-cards'))
@@ -23,8 +28,7 @@ function Card () {
   }).map(([k, v]) => { return { [k]: v } })
 
   return (
-
-    <div id='Card' className='Card'>
+    <div id='Card' className='Card' >
       <Header program={program || ''} level={level || ''} discipline={discipline || ''} />
       <main className='Card-main'>
         <Guest text={guest} level={level || ''} comments={comments || ''} instructor={instructor} date={date} />
@@ -32,7 +36,6 @@ function Card () {
       </main>
       <Footer />
     </div>
-
   )
 }
 

@@ -20,7 +20,12 @@ const capture = (options = {}) => {
 
           // hide DOM element and place captured image on page
           node.style.display = 'none'
-          node.parentElement.appendChild(img)
+
+          // capture is being called twice by useEffect while ht,l-to-image does it's thing.
+          // Only append once.
+          if (!document.getElementById('Generated')) {
+            node.parentElement.appendChild(img)
+          }
         })
         .catch(function (error) {
           console.error('oops, something went wrong!', error)
