@@ -13,11 +13,7 @@ function Card () {
     // note:even though capture waits for images to load before trying to capture,
     // the capture process itself tends to fail initial (non cached) image loading on iOS
 
-    // even though useEffect gets an empty array, it stills executes twice.
-    // prevent that.
-    if (!document.getElementById('Generated')) {
-      capture({ width: 1080, pixelRatio: 1 })
-    }
+    capture({ width: 1080, pixelRatio: 1 })
   }, []) // empty array means 'run once'
 
   const current = JSON.parse(window.localStorage.getItem('snow-cards'))
